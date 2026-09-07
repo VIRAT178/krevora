@@ -106,7 +106,7 @@ export const DivisionCard: React.FC<DivisionCardProps> = ({
       {/* DETAIL MODAL (Opens for client demo showcase) */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10">
+          <div className="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-6 md:p-10">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -122,12 +122,12 @@ export const DivisionCard: React.FC<DivisionCardProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#07101f] border border-cyan-500/30 rounded-2xl p-6 sm:p-10 shadow-[0_20px_70px_rgba(0,0,0,0.8)] z-10"
+              className="relative w-full max-w-2xl max-h-[calc(100dvh-1.5rem)] sm:max-h-[90vh] overflow-y-auto bg-[#07101f] border border-cyan-500/30 rounded-xl sm:rounded-2xl p-5 pt-14 sm:p-10 shadow-[0_20px_70px_rgba(0,0,0,0.8)] z-10"
             >
               {/* Close Button */}
               <button
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-6 right-6 p-2 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-zinc-400 hover:text-white border border-white/10 transition-colors"
+                className="absolute top-4 right-4 sm:top-6 sm:right-6 p-2 rounded-full bg-white/[0.05] hover:bg-white/[0.1] text-zinc-400 hover:text-white border border-white/10 transition-colors"
                 aria-label="Close details"
               >
                 <X className="w-5 h-5" />
@@ -184,7 +184,7 @@ export const DivisionCard: React.FC<DivisionCardProps> = ({
                 <h4 className="text-xs font-mono tracking-[0.2em] text-zinc-400 uppercase mb-4">
                   PERFORMANCE IMPACT
                 </h4>
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {data.metrics.map((metric) => (
                     <div
                       key={metric.label}
@@ -208,7 +208,7 @@ export const DivisionCard: React.FC<DivisionCardProps> = ({
                     setIsModalOpen(false);
                     if (onSelectDivision) onSelectDivision(data.id);
                   }}
-                  className="px-6 py-3 rounded-full text-xs font-semibold tracking-[0.18em] uppercase text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition-colors flex items-center gap-2"
+                  className="w-full sm:w-auto px-6 py-3 rounded-full text-xs font-semibold tracking-[0.18em] uppercase text-slate-950 bg-cyan-400 hover:bg-cyan-300 transition-colors flex items-center justify-center gap-2 text-center"
                 >
                   <span>INQUIRE ABOUT {data.title}</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
