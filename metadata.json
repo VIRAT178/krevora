@@ -1,0 +1,6 @@
+{
+  "name": "KREVORA",
+  "description": "Krevora — Modern digital growth and technology company combining AI, automation, digital products, and intelligent systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
