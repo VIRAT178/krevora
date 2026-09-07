@@ -173,7 +173,7 @@ export const Contact: React.FC<ContactProps> = ({
       {/* CONVERSATION MODAL / DRAWER */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-6 md:p-10">
+          <div className="fixed inset-0 z-[60] flex items-start justify-center p-3 pt-24 sm:p-6 sm:pt-24 md:p-10 md:pt-24">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -189,7 +189,7 @@ export const Contact: React.FC<ContactProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-xl bg-[#07101f] border border-cyan-500/30 rounded-xl sm:rounded-2xl p-5 pt-14 sm:p-10 shadow-[0_20px_80px_rgba(0,0,0,0.9)] z-10 max-h-[calc(100dvh-1.5rem)] sm:max-h-[90vh] overflow-y-auto"
+              className="relative w-full max-w-xl bg-[#07101f] border border-cyan-500/30 rounded-xl sm:rounded-2xl p-5 pt-14 sm:p-10 shadow-[0_20px_80px_rgba(0,0,0,0.9)] z-10 max-h-[calc(100dvh-6.5rem)] overflow-y-auto"
             >
               {/* Close Button */}
               <button

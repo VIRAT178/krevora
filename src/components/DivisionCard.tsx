@@ -106,7 +106,7 @@ export const DivisionCard: React.FC<DivisionCardProps> = ({
       {/* DETAIL MODAL (Opens for client demo showcase) */}
       <AnimatePresence>
         {isModalOpen && (
-          <div className="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-6 md:p-10">
+          <div className="fixed inset-0 z-[60] flex items-start justify-center p-3 pt-24 sm:p-6 sm:pt-24 md:p-10 md:pt-24">
             {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -122,7 +122,7 @@ export const DivisionCard: React.FC<DivisionCardProps> = ({
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-2xl max-h-[calc(100dvh-1.5rem)] sm:max-h-[90vh] overflow-y-auto bg-[#07101f] border border-cyan-500/30 rounded-xl sm:rounded-2xl p-5 pt-14 sm:p-10 shadow-[0_20px_70px_rgba(0,0,0,0.8)] z-10"
+              className="relative w-full max-w-2xl max-h-[calc(100dvh-6.5rem)] overflow-y-auto bg-[#07101f] border border-cyan-500/30 rounded-xl sm:rounded-2xl p-5 pt-14 sm:p-10 shadow-[0_20px_70px_rgba(0,0,0,0.8)] z-10"
             >
               {/* Close Button */}
               <button
